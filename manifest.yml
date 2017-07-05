@@ -1,4 +1,8 @@
+---
 applications:
-- name: node-hello-world
-  memory: 128M
-  buildpack: sdk-for-nodejs
+- name: webchatbot
+  path: target/Chatbot-0.0.1.war
+  buildpack: liberty-for-java
+  env:
+    CONVERSATION_WORKSPACE_ID: db934b2e-49db-44d4-be09-ec57395fc84a
+    CAR_SERVICE_HOST: webchatbotcar.mybluemix.net
